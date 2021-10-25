@@ -100,7 +100,7 @@ defmodule Wallaby.Query.XPath do
   Matches any element by its inner text.
   """
   def text(selector) do
-    ~s{.//*[contains(normalize-space(text()), "#{selector}")]}
+    ~s{.//*[normalize-space(text())="#{selector}"]}
   end
 
   @doc """
